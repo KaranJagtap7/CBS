@@ -6,3 +6,12 @@ entity Employee{
         PHONE:Integer;
         CITY:String(20);
 }
+
+@cds.persistence.exists
+@cds.persistence.calcview
+entity EMPVIEW{
+    key EMPID:String(30);
+        EMPNM:String(100);
+        PHONE:Integer;
+        CITY:String(20);
+}

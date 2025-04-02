@@ -6,6 +6,9 @@ service MyService {
     // Get service
     entity Employee as projection on db.Employee;
 
+    // Get service using calcalution view
+    entity EMPVIEW as projection on db.EMPVIEW;
+
     // post service 
     // action fun_CreateEmployee(oPayload:String) returns String; kkgg
 

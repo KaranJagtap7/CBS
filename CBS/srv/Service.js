@@ -23,7 +23,6 @@ module.exports = cds.service.impl(function () {
 
             return await SELECT.from(Employee)
             
-            //test
         } catch (error) {
 
             console.error(error)
