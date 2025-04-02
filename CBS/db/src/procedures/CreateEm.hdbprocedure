@@ -1,0 +1,19 @@
+PROCEDURE "CreateEm"( 
+    IN EMPID NVARCHAR(30),
+    IN EMPNM NVARCHAR(100),
+    IN PHONE INTEGER,
+    IN CITY NVARCHAR(20)
+)
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+--    READS SQL DATA 
+   AS
+BEGIN
+   /*************************************
+       Write your procedure logic
+   *************************************/
+
+   INSERT INTO CBSNM_EMPLOYEE (EMPID,EMPNM,PHONE,CITY) VALUES (:EMPID,:EMPNM,:PHONE,:CITY);
+
+END

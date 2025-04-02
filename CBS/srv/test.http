@@ -1,0 +1,13 @@
+###
+
+POST http://localhost:39509/odata/v2/my/InsertEmp
+Content-Type: application/json
+
+{
+
+  "EMPID": "SLS1064",
+  "EMPNM": "Utkarsha Samant",
+  "PHONE": 1234,
+  "CITY": "PUNE"
+
+}
