@@ -7,7 +7,7 @@ service MyService {
     entity Employee as projection on db.Employee;
 
     // post service 
-    // action fun_CreateEmployee(oPayload:String) returns String; kk
+    // action fun_CreateEmployee(oPayload:String) returns String; kkgg
 
     entity InsertEmp as projection on db.Employee;
 }
