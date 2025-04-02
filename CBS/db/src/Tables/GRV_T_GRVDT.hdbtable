@@ -1,0 +1,19 @@
+COLUMN TABLE "GRV_T_GRVDT" (
+    "EMPID" NVARCHAR(30) COMMENT 'Employee id',
+	"GRVST" INTEGER COMMENT 'Grievance status',
+	"HDWAS" SMALLINT COMMENT 'Have you had a discussion with the appropriate supervisor?', 
+    "DSCDT" NVARCHAR(5000) COMMENT 'Discussion Details', 
+    "UNRCM" CLOB COMMENT 'Union Representative Comments',
+	"ISDEL" NVARCHAR(1) COMMENT 'Is deleted',
+	"CREATEDBY" NVARCHAR(100) COMMENT 'Created by',
+	"CREATEDDATE" DATE COMMENT 'Created date',
+	"CREATEDTIME" TIME COMMENT 'Created time',
+	"CHANGEDBY" NVARCHAR(100) COMMENT 'changed by',
+	"CHANGEDDATE" DATE COMMENT 'changed date',
+	"CHANGEDTIME" TIME COMMENT 'changed time',
+	"GRVID" BIGINT GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1) COMMENT 'Grievance id',
+	PRIMARY KEY(
+		"GRVID"
+	)
+)
+UNLOAD PRIORITY 5 AUTO MERGE;
