@@ -1,0 +1,17 @@
+PROCEDURE "CreateAddress"( 
+    IN EMPID NVARCHAR(30),
+    IN ADDRS NVARCHAR(100)
+)
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+--    READS SQL DATA 
+   AS
+BEGIN
+   /*************************************
+       Write your procedure logic
+   *************************************/
+
+   INSERT INTO CBSNM_ADDRESS (EMPID,ADDRS) VALUES (:EMPID,:ADDRS);
+
+END

@@ -1,0 +1,7 @@
+{
+  "my_access_role#": {
+    "Ref1": {
+      "schema": "CBSSCH"
+    }
+  }
+}

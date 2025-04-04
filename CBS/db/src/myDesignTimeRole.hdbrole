@@ -1,0 +1,31 @@
+{
+  "role": {
+    "name": "my_access_role#",
+    "schema_privileges": [
+      {
+        "reference": "Ref1",
+        "privileges": [
+          "SELECT",
+          "INSERT",
+          "UPDATE",
+          "DELETE",
+          "ALTER"
+        ],
+        "privileges_with_grant_option": [
+          "ALTER",
+          "CREATE ANY",
+          "CREATE TEMPORARY TABLE",
+          "EXECUTE",
+          "SELECT",
+          "SELECT CDS METADATA",
+          "SELECT METADATA",
+          "INSERT",
+          "UPDATE",
+          "DELETE",
+          "DEBUG",
+          "UNMASKED"
+        ]
+      }
+    ]
+  }
+}

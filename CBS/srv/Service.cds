@@ -14,8 +14,10 @@ service MyService {
     entity EMPVIEW as projection on db.EMPVIEW;
     entity ADDSVIEW as projection on db.ADDSVIEW;
 
-    // post service 
+    // post service employee
     function fun_CreateEmployee(oPayload:String) returns String;
 
-    entity InsertEmp as projection on db.Employee;
+    // post service adress
+    function fun_CreateAddress(oPayload:String) returns String;
+
 }
