@@ -15,3 +15,10 @@ entity EMPVIEW{
         PHONE:Integer;
         CITY:String(20);
 }
+
+@cds.persistence.exists
+@cds.persistence.calcview
+entity ADDSVIEW{
+    key EMPID:String(30);
+        ADDRS:String(100);
+}

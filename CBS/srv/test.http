@@ -1,6 +1,6 @@
 ###
 
-POST http://localhost:4004/odata/v2/my/InsertEmp
+POST http://localhost:46019/odata/v2/my/fun_CreateEmployee
 Content-Type: application/json
 
 {

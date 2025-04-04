@@ -1,0 +1,8 @@
+{
+  "CBSNM_ADDRESS": {
+    "target": {
+      "object": "Address",
+      "schema": "CBSSCH"
+    }
+  }
+}

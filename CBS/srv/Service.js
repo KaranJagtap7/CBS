@@ -3,7 +3,7 @@ const cds = require('@sap/cds')
 module.exports = cds.service.impl(function () {
 
 
-    this.on('fun_CreateEmployee', 'InsertEmp', async (req) => {
+    this.on('fun_CreateEmployee', async (req) => {
         try {
             console.log("Request Data:", req.data); // Log the request data 
                
@@ -12,16 +12,20 @@ module.exports = cds.service.impl(function () {
             var data = JSON.parse(req.data.oPayload)
             const { Employee } = this.entities
 
+              // Declare output parameter variable
+
             //Check for undefined or invalid values 
             if (!data.EMPID || !data.EMPNM || !data.PHONE || !data.CITY) {
                 throw new Error('Missing required fields (Employee id, Name, Phone no and City).');
             }
 
-            let result = await tx.run('Call "CreateEm"(?,?,?,?)',[data.EMPID,data.EMPNM,data.PHONE,data.CITY])
+            let result = await tx.run('Call "CreateEm"(?,?,?,?,?)',[data.EMPID,data.EMPNM,data.PHONE,data.CITY]);
 
-            console.log(result)
-
-            return await SELECT.from(Employee)
+            if (result.FLAG === 0) {
+                return 'Employee Added Successfully.';
+            } else {
+                return 'Employee updated Successfully.';
+            }
             
         } catch (error) {
 
