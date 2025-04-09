@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CBSNM_ERRORLOG" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="true" application="BAS">
+<descriptions defaultDescription="CBSNM_ERRORLOG"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="CBSNM_GRV_T_ERLOG">
+    <resourceUri>CBSNM_GRV_T_ERLOG</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="ELGID"/>
+      <viewAttribute id="APPNM"/>
+      <viewAttribute id="FNCNM"/>
+      <viewAttribute id="PAYLD"/>
+      <viewAttribute id="ERROR"/>
+      <viewAttribute id="ISDEL"/>
+      <viewAttribute id="CRTBY"/>
+      <viewAttribute id="CRTDT"/>
+      <viewAttribute id="CRTTM"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="CBSNM_GRV_T_ERLOG"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="APPNM" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Application name"/>
+      <keyMapping columnObjectName="Projection_1" columnName="APPNM"/>
+    </attribute>
+    <attribute id="FNCNM" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Function Name"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FNCNM"/>
+    </attribute>
+    <attribute id="ISDEL" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Is deleted"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ISDEL"/>
+    </attribute>
+    <attribute id="CRTBY" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Created by"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CRTBY"/>
+    </attribute>
+    <attribute id="CRTDT" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Created date"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CRTDT"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="ELGID" order="1" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Error log id (unque key)"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ELGID"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="CRTTM" order="7" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="Created time"/>
+      <measureMapping columnObjectName="Projection_1" columnName="CRTTM"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="197"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

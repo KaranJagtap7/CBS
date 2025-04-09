@@ -22,3 +22,11 @@ entity ADDSVIEW{
     key EMPID:String(30);
         ADDRS:String(100);
 } 
+
+@cds.persistence.exists
+@cds.persistence.calcview
+entity ERRORLOG{
+    key ELGID:Integer;
+        APPNM:String(50);
+        FNCNM:String(50);
+} 

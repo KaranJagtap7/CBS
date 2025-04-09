@@ -13,6 +13,7 @@ service MyService {
     // Get service using calcalution view
     entity EMPVIEW as projection on db.EMPVIEW;
     entity ADDSVIEW as projection on db.ADDSVIEW;
+    entity ERRORLOG as projection on db.ERRORLOG;
 
     // post service employee
     function fun_CreateEmployee(oPayload:String) returns String;

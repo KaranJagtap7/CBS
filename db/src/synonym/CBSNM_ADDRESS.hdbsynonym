@@ -4,5 +4,11 @@
       "object": "Address",
       "schema": "CBSSCH"
     }
+  },
+  "CBSNM_GRV_T_ERLOG": {
+    "target": {
+      "object": "GRV_T_ERLOG",
+      "schema": "CBSSCH"
+    }
   }
 }
