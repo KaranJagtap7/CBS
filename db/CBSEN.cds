@@ -21,4 +21,4 @@ entity EMPVIEW{
 entity ADDSVIEW{
     key EMPID:String(30);
         ADDRS:String(100);
-}
+} 
