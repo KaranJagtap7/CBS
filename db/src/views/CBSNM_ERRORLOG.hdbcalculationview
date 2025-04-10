@@ -21,8 +21,14 @@
       <viewAttribute id="CRTBY"/>
       <viewAttribute id="CRTDT"/>
       <viewAttribute id="CRTTM"/>
+    
+      <viewAttribute id="TEST"/>
     </viewAttributes>
-    <calculatedViewAttributes/>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="TESTC" datatype="VARCHAR" length="10000" expressionLanguage="SQL">
+        <formula>CAST(&quot;PAYLD&quot; AS VARCHAR(10000))</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
     <input node="CBSNM_GRV_T_ERLOG"/>
   </calculationView>
 </calculationViews>
@@ -48,6 +54,11 @@
     <attribute id="CRTDT" order="6" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="Created date"/>
       <keyMapping columnObjectName="Projection_1" columnName="CRTDT"/>
+    </attribute>
+  
+    <attribute id="TESTC" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TESTC"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TESTC"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>

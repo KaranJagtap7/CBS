@@ -29,4 +29,5 @@ entity ERRORLOG{
     key ELGID:Integer;
         APPNM:String(50);
         FNCNM:String(50);
+        TESTC:LargeString;
 } 
